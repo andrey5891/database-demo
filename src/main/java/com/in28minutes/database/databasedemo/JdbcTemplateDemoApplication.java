@@ -9,14 +9,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Date;
 
-@SpringBootApplication
-public class DatabaseDemoApplication implements CommandLineRunner {
+//@SpringBootApplication
+public class JdbcTemplateDemoApplication implements CommandLineRunner {
 
 	@Autowired
 	private PersonJdbcDao personJdbcDao;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DatabaseDemoApplication.class, args);
+		SpringApplication.run(JdbcTemplateDemoApplication.class, args);
 	}
 
 	@Override
