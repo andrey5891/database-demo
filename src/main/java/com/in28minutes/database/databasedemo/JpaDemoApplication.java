@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Date;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class JpaDemoApplication implements CommandLineRunner {
 
     @Autowired
@@ -23,7 +23,7 @@ public class JpaDemoApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println(personJpaRepository.findById(10001).toString());
         System.out.println(personJpaRepository.insert(new Person("Andrey", "Russia, Kazan", new Date())));
-        System.out.println(personJpaRepository.update(new Person(1, "Andrey", "Russia, Moscow", new Date())));
+        System.out.println(personJpaRepository.update(new Person(1, "Andrey", "Moscow", new Date())));
         personJpaRepository.deleteById(10003);
         System.out.println(personJpaRepository.findAll());
     }
